@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a href="2.4.2 Bike-sharing.html" class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a class="logo">
+							</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Meny</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h1>M E N Y</h1>
+					<ul>
+						<li><a href="1.1 Hjem.html">Hjem</a></li>
+						<li><a href="2.6.1 HR.html">- HR (Power BI dashboard)</a></li>
+						<li><a href="2.5.1 Covid-19.html">- Covid-19 (Python prosjekt)</a></li>
+						<li><strong>- Bysykkel (SQL / Power BI prosjekt)</strong></a></li>
+						<li><a href="2.3.1 Iskald.html">- Iskald (Qlik dashboard)</a></li>
+						<li><a href="2.2.1 Priskalkyle.html">- Priskalkyle (Excel prosjekt)</a></li>
+						<li><a href="2.1.1 Sjomat.html">- Sjømat (Rapportoversikt)</a></li>
+						<li><a href="3.1 CV.html">CV og sertifikater</a></li>
+					</ul>
+				</nav>
+								
+<!-- Main -->
+<div id="main">
+	<div class="inner">
+		<h1>Prosjekt: Bysykkel</h1>
+		<h2 style="margin-bottom: 0px;">Introduksjon</h2>
+		<p>Som en del av Google sin Data Analytics Professional Certificate jobbet jeg med et case hvor man skal se på en
+			problemstilling for et fiktivt selskap som leier ut bysykler i Chicago. Selskapet heter Cyclistic, og forretningsmodellen 
+			går ut på å leie ut over 5 800 sykler innenfor et nettverk av sykkelstasjoner over hele Chicago. Cyclistic tilbyr både enkeltbilleter, 
+			dagspass og årsmedlemskap. Kunder som kjøper enkeltbilletter eller dagspass vil her bli referert til som <i>tilfeldige bruker</i> eller "casual riders", mens
+			brukere med årsmedlemskap vil jeg referere til som medlemmer eller "members".</p>
+		<p style="margin-bottom: 0px;">Utgangspunktet for caset er at Cyclistic har konkludert med at medlemmer er mer lønnsomme enn <i>casual riders</i>.
+			Markedsdirektøren mener derfor at selskapets fremtidige suksess avhenger av å maksimere antallet
+			årsmedlemskap. Hun har derfor satt seg et klart mål: å utforme markedsstrategier rettet mot å få tilfeldige brukere
+			til å bli med medlemmer. Det er tre spørsmål som vil legge til grunn for de nye markedsstrategiene:</p>
+		<p style="margin-bottom: 0px;"><b>1. På hvilke måter bruker medlemmer og tilfeldige brukere Cyclistic forskjellig?</b></p>
+		<p style="margin-bottom: 0px;">	  2. Hvorfor ville tilfeldige brukere kjøpt årsmedlemskap i Cyclistic?</p>
+		<p>	  							  3. Hvordan kan Cyclistic bruke digitale medier til å påvirke tilfeldige brukere til å bli medlemmer?</p>		
+		<p style="margin-bottom: 0px;">Vårt oppdrag er å svare på det første spørsmålet og til å produsere en rapport med følgende innhold:</p>
+		<p style="margin-bottom: 0px;">   1. En beskrivelse av forretningsoppgaven vi forsøker å løse</p>
+		<p style="margin-bottom: 0px;">   2. En beskrivelse av alle datakilder so brukes</p>
+		<p style="margin-bottom: 0px;">   3. Dokumentasjon av eventuell behandling og manipulering av dataen</p>
+		<p style="margin-bottom: 0px;">   4. Et sammendrag av analysen</p>
+		<p style="margin-bottom: 0px;">   5. Visualiseringer som støtter opp under analysen og viktige funn</p>
+		<p >   							  6. Endringsforslag basert på analysen</p>
+		<h2 style="margin-bottom: 0px;">Forretningsoppgaven</h2>
+		<p>Vår forretningsoppgave er å forstå på hvilke måter medlemmer og tilfeldige brukere Cyclistic forskjellig, slik at vi kan utarbeide forslag 
+			på hvordan tilfeldige brukere kan bli gjort om til medlemmer.</p>
+		<h2 style="margin-bottom: 0px;">Datakilder og databehandling</h2>
+		<p>I dette caset vil jeg bruke brukerdata fra januar til desember 2021. Hvert datasett er i csv-format og består av data av alle turene
+			som har blitt gjennomført av våre brukere i denne perioden. Jeg skal bruke Excel og SQL til å behandle og analysere dataen, mens 
+			jeg bruker Power BI til å visualisere resultatet. Før jeg starter med dette, så er det noen begrensninger i dataen som vi må
+			være klare over. "Classic bikes" eller <i>klassiske sykler</i> ble tidligere kalt for "docked bikes" eller <i>stasjonssykler</i>
+			og referer til det samme. Turer med ordinære sykler startes og avsluttes alltid ved en sykkelstasjon. Elsykler derimot har en sykkellås,
+			noe som lar brukere parkere dem hvor som helst i nærheten av en sykkelstasjon. Dataen skal heller ikke inneholde turer som er kortere enn 
+			ett minutt eller lenger enn en dag. Eventuelle turer som ikke oppfyller disse begrensningene er sannsynligvis ikke kundedata, men 
+			tester eller vedlikeholdsarbeid utført av Cyclistic. Disse syklene kan også bli stjålet. Denne dataen bør derfor fjernes.</p>
+			<img src="images/cyclistic_columns.jpg" style="float: right; width: 25%; margin-left: 10%; margin-bottom: 2em;">
+			<h2 style="margin-bottom: 0px;">Databehandling</h2>
+		<p>For å behandle dataen brukte jeg SQL. Først opprettet jeg et datasett og importerte alle 12 csv-filer, én for hver måned, som separate tabeller.
+			Deretter kombinerte jeg disse ved å bruke UNION ALL-kommandoen. Den nye tabellen har nå totalt 5 595 063 rader. Det betyr at vi, før vi har startet
+			å behandle dataen, nesten har 5,6 millioner registrertesykkelturer i 2021. Den nye tabellen inneholder kolonnene vist på bildet til høyre.
+			Etter å ha gjort meg kjent med dataen og kjørt noen spørringer, trakk jeg følgende konklusjoner:</p>
+		<p style="margin-bottom: 0px;">1. <b>Ride_id</b> er en primærnøkkel (primary key) som kun består av unike verdier og hvor hver streng består av 16 tegn.</p>
+		<p style="margin-bottom: 0px;">2. <b>Rideable_type</b> består av tre forskjellige typer sykler: den klassike sykkelen, elsykkelen og stasjonssykkelen. 
+			Siden den ordinære og stasjonssykkelen refereren til samme type sykkel, vil jeg gjøre om alle "stasjonssykler" til ordinære sykler eller 
+			“classic bikes” ved hjelp av REPLACE-funksjonen.</p>
+		<p style="margin-bottom: 0px;">3. <b>Started_at</b> og <b>ended_at</b> refererer til datoen og tidspunktet sykkelturen ble startet eller avsluttet. 
+			Jeg la til en kolonne med turens lengde i minutter, ved hjelp av TIMESTAMP_DIFF-funksjonen. Etter det filtrerte jeg simpelthen ut alle turene
+			på under ett minutt eller over 1440 (et døgn).</p>	
+		<p style="margin-bottom: 0px;">4. <b>Start_station_name</b> og <b>end_station_name</b>er navnene på alle stasjonene. Siden ordinære sykler må ha en
+			start- og endestasjon, så fjerner jeg alle radene hvor noen av disse verdiene mangler ved hjelp av DELETE-funksjonen. Foe elsykler, så endrer jeg 
+			simpelthen alle null-verdiene til sykkellås eller "Bike Lock". Jeg fjerner også alle unødvendige mellomrom ved hjelp av TRIM-funksjonen.</p>	
+		<p style="margin-bottom: 0px;">5. <b>Start_station_id</b> og <b>end_station_id</b> består av verdier med forskjellige strenglengder og ettersom
+			jeg anser de som irrelevant for analysen, ignorer jeg ddisse kolonnene.</p>
+		<p style="margin-bottom: 0px;">6. <b>Start_lat</b>, <b>start_lng</b>, <b>end_lat</b> og <b>end_lng</b> viser til koordinatene av start og ende-lokasjonene
+			for hver sykkeltur. Jeg fjernet alle turene med nullverdier i disse kolonnene.</p>	
+		<p >   						   7. <b>Member_casual</b> viser til om denne sykkelturen ble gjennomført av et medlem eller en <i>tilfeldig bruker</i>.</p>
+		<h2 style="margin-bottom: 0px;">Analysesammendrag</h2>
+		<p>Etter å ha behandlet dataen, så er det en god ting å ta et skritt tilbake og minne seg selv på spørsmålet vi forsøker å besvare: 
+			"På hvilken måte bruker medlemmer og <i>tilfeldige brukere</i> Cyclistic forskjellig?» For å kunne svare på det bør spørringen vår derfor inneholde 
+			informasjon som kan avdekke eventuelle brukerforskjeller mellom disse gruppene. Et interessant aspekt å se på i den sammenhengen er når Cyclistic brukes
+			gjennom året, gjennom en uke og ejnnom et døgn. For å se på det velger jeg å inkludere en dato-, dag- og time-kolonne i spørringen min.
+			I tillegg lager jeg en "sesong"-kolonne. En viktig ting å huske på er at disse kolonnene er hentet fra "started_at"-kolonnen. 
+			Hele spørringen jeg lastet opp til Power BI inneholdt 34 000 rader og så slik ut:</p>
+			<img src="images/cyclistic_full_query.jpg" style="float: left; width: 90%; margin-right: 9%; margin-bottom: 2em;">
+			<p>For å holde spørringen relativt liten og enkel, valgte jeg å gjøre separate spørringer for å trekke ut geodataen og visualisere denne. 
+				Jeg så da kun på de 50 mest populære start- og endestasjonene for både medlemmer og <i>tilfeldige brukere</i>.</p>
+		<h2 style="margin-bottom: 0px;">Visualisering og nøkkelfunn</h2>
+		<p>Jeg startet med å se litt på de viktigste tallene. Etter å ha behandlet dataen satt jeg igjen med rundt 5 millioner registrerte sykkelturer i 2021: 
+			2,8 millioner registrert av medlemmer og 2,2 millioner registrert av <i>tilfeldige brukere</i>. Gjennomsnittlig lengde for én sykkeltur var på
+			rundt 17 minutter. For medlemmer derimot, var det like under 13 minutter, og for <i>tilfeldige brukere</i> mer enn 21 minutter.</p>
+		<p>Det fikk meg til å lure på om <i>tilfeldige brukere</i> også sykler lenger. For å svare på det på det spørsmålet  brukte jeg Haversine-formelen 
+			(se spørringen) for å beregne gjennomsnittlig avstand mellom hver start- og endestasjon. Dette vil ikke gi den faktiske distansen som er kjørt, 
+			men det gir oss en viss indikasjon på distansen på én gjennomsnittlig tur. Den viser at gjennomsnittlig avstand mellom start- og endestasjon 
+			er rundt 2,35 kilometer. For <i>tilfeldige brukere</i> er dette rundt 2,4 kilometer, for medlemmer 2,31 km.</p>
+			<img src="images/cyclistic_dashboard.jpg" style="float: right; width: 60%; margin-left: 3%; margin-bottom: 2em;">
+		<p>Rundt 3,3 millioner turer ble gjennomført med en klassisk sykkel, mens 1,7 millioner turer ble gjennomført med en elsykkel. Elektriske sykler ser ut 
+			til å være litt mer	populære blant <i>tilfeldige brukere</i>. Det er imidlertid én viktig ting å huske på; her ser vi på aggregerte data. 
+			Vår data bryter ikke ned historien for en gjennomsnittlig bruker. For eksempel kan et relativt lite antall medlemmer, som foretrekker den 
+			klassiske sykkelen, dra analysen i en bestemt retning dersom de bruker tjenesten mye og dermed registrerer mange turer. 
+			Det kan da se ut som et gjennomsnittlig medlem foretrekker klassiske sykler, mens dette kanskje ikke er tilfelle.</p>
+		<p>Linjediagrammet nederst til venstre på dashbordet viser antall turer per måned i 2021. Gjennom store deler av året blir de fleste sykkelturene 
+			gjennomført av medlemmer. Fra slutten av juni til august overstiger imidlertid <i>tilfeldige brukere</i> medlemmer i antall turer. Filtrerer vi
+			etter «member» og «casual» og tar en titt på det sesongbaserte kakediagrammet midt midt på dashbordet ser det ut til at sommeren er en klar favoritt
+			blant <i>tilfeldige brukere</i>. Faktisk så ble nesten halvparten (49 %) av alle sykkelturene registrert av <i>tilfeldige brukere</i> i løpet av
+			sommeren. Blant medlemmene er dette tallet 38 prosent, og det ser ut til at medlemmene er mer opptatt av sykling året rundt.</p>
+		<p>Når vi ser på det andre kakediagrammet, legger vi merke til at lørdag og søndag er de dagene <i>tilfeldige brukere</i> bruker tjenesten mest.
+			Blant denne brukergruppen ble faktisk hele 41% av alle sykkelturene i 2021 registrert på lørdag eller søndag. Det tilsvarende tallet blant medlemmer er 26%, og det viser seg 
+			at tirsdag til fredag er de mest populære dagene for tjenesten vår blant medlemmer. Hvis vi ser på linjediagrammet nederst til høyre og filtrerer vekk lørag og søndag, 
+			legger vi merke til et annet tydelig mønster. Medlemmer ser ut til å bruke tjenesten vår mest i løpet av to tidsperioder i døgnet: rundt 07.00 til 9.00 og 17.00 til 19.00. 
+			Faktisk så ble blir 25 prosent av alle sykkelturene blant medlemmer startet mellom 07.00 og 09.00. Denne tiden på døgnet er også mest populær blant <i>tilfeldige brukere</i>, 
+			men mønsteret er ikke like tydelig.</p>
+			<img src="images/cyclistic_geomap.jpg" style="float: right; width: 60%; margin-left: 3%; margin-bottom: 2em;">
+		<p>La oss til slutt ta en titt på geodataen vår. Jeg plottet de 50 mest populære start- og endestasjonene for både medlemmer og <i>tilfeldige brukere</i> i fire forskjellige kartdiagrammer.
+			Resultatene er vist nedenfor, og om vi ser nøye etter, så kan vi se et mønster her. De mest populære <i>stasjonene</i> blant <i>tilfeldige brukere</i> finner vi langs kysten, 
+			mens medlemmer ser ut til å bevege seg mer i det som ser ut til å være urbane områder.</p>
+		<h2 style="margin-bottom: 0px;"><b>Sammendrag</b></h2>
+		<p>Selv om det er for tidlig å trekke konklusjoner, så er det flere indikasjoner på at medlemmer og <i>tilfeldige brukere</i> bruker Cyclistic på ganske forskjellige måter. 
+			<b>Det ser ut til at medlemmer bruker denne tjenesten til å komme seg rundt i hverdagen, og spesielt til å pendle mellom hjem og jobb. <i>Tilfeldige brukere</i> derimot 
+				bruker tjenesten mest på fritiden.</b> <i>Tilfeldige brukere</i> bruker sykkelen lenger hver gang de bruker tjenesten, men de ser ikke ut til å tilbakelegge noen lengre distanse
+				enn medlemmer gjør på sine turer. Jeg vil anta at <i>tilfeldige brukere</i> prøver å få mest mulig ut av tiden sin med sine enkeltbiletter og dagskort. 
+				I den forbindelse kunne det vært interessant å se på prisene for de ulike produktene. Uansett, så sykler <i>tilfeldige brukere</i> muligens ikke direkte fra
+			A til B, og har det muligens ikke like travelt. <i>Tilfeldige brukere</i> bruker Cyclistic mest om sommeren og i helgene. De ser ut til å legge sine sykkelturer 
+			i større grad langs kystlinjen til Chicago, et område som er fullt av strender, parker og andre typer fritidsattraksjoner. Dette understreker mistanken om at denne
+			brukergruppen bruker tjenesten i større grad på fritiden.
+		<p>Medlemmer ser ut til å være mer opptatt av sykling på ukedager og året rundt. De bruker tjenesten mest i rushtiden, noe som kan indikere at de bruker
+			tjenesten mest til å pendle til og fra jobb. Denne tanken styrkes av at de mest brukte stasjonene blant medlemmer er lokalisert i urbane områder.
+			Vi må imidlertid igjen huske på at disse diagrammene viser et bilde på totalen, og bryter ikke ned bruken til et gjennomsnittlig medlem eller en en gjennomsnittlig <i>tilfeldige bruker</i>.</p>
+		<h2 style="margin-bottom: 0px;">Forslag</h2>
+		<p>Når vi tar et skritt tilbake igjen og minner oss selv på forretningsoppgaven, så tror jeg det er flere veier videre etter vår analyse.</p>
+		<p><b>Et alternativ er å foreta en enda dypere og grundigere analyse.</b> For å avdekke relevante markedsføringsmuligheter kan vi samle inn mer relevant data og analysere det 
+			enda grundigere. Da kan vi også teste hypotesen om at medlemmer bruker tjenesten i stor grad til å pendle, mens <i>tilfeldige brukere</i> bruker den mest på fritiden. 
+			Gjør vi dette, så bør vi også redefinere forretningsoppgaven og stille oss selv noen spørsmål. Hva er det som gjør at medlemmer og <i>tilfeldige brukere</i> bruker tjenesten på forskjellige måter?
+			Hva får de ut av opplevelsen og hva er viktig for hver av brukergruppene? Vi bør da ta sikte på å samle mer kvalitativ data (om brukermotivasjoner, rutiner etc.) og demografisk data,
+			for eksempel gjennom forbrukerundersøkelser. For å understreke hvorfor demografisk data er så verdifullt, bør vi huske på at en brukers inntekt, adresse, alder og BMI er svært relevant 
+			for deres sykkelkapasitet og hvilket medlemskap de har råd til. Til slutt bør vi forsøke å avdekke mer konkrete forbindelser mellom forskjellige måter å bruke tjenesten på. 
+			Dette kan hjelpe oss med å avdekke store muligheter eller hindringer for å få <i>tilfeldige brukere</i> til å bli medlemmer. Ulempen med denne tilnærmingen er
+			at det vil koste mer tid og ressurser før vi kan sette i gang tiltak, mens fordelen er at risikoen for å sette inn feil tiltak vil bli mindre med en en grundigere forståelse av situasjonen.</p>
+		<p><b>Et annet alternativ er å sette i gang tiltak uten videre analyse.</b> Vi kan bruke konklusjonene fra denne analysen til å danne grunnlaget for
+			Cyclistic sin markedsstrategi til å få <i>tilfeldige brukere</i> til å bli medlemmer. Velger vi dette alternativet, blir neste steg å vurdere <i>hvilke</i> tiltak som bør vurderes.
+			Vi bør da ha fokus på faktorer som påvirker <i>tilfeldige brukere</i> sin betalingsvillighet. Vi for eksempel vurdere å innføre et helge- eller sesongpass, noe som gir muligheter
+			for ubgrenset bruk av tjenesten i en definert periode. Vi kan også fokusere på å formidle et budskap som gjør det mer interessant for <i>tilfeldige brukere</i> å velge et årsmedlemskap.
+			Vi kan si at ved å bruke Cyclistic daglig sparer du en x antall kroner på bensin/diesel, du forbrenner en x mengde kalorier eller du sparer planeten for en x mengde co2. 
+			Vi kan også vurdere en prismodell der et "premium"-medlemskap gir ekstra privilegier for medlemmer er villige til å betale litt ekstra. Ett privilegium kan være
+			å ha mulighet til å reservere en sykkel når etterspørselen er høyest, for eksempel i rushtiden. Dette vil tilføre ekstra verdi gjennom økt forutsigbarhet for de som pendler til og fra jobb.
+			Uansett hvordan vi velger å gå videre, må vi huske på at en økning i antall medlemskap sannsynligvis også vil øke kostnadene våre gjennom. Jeg vil derfor anbefale å gjennomføre 
+			en <i>nytte-kostnadsanalyse</i> uavhengig av hvilke tiltak vi vil vurdere å sette i gang med.</p>
+	</div>
+</div>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+</body>
+</html><!DOCTYPE HTML>

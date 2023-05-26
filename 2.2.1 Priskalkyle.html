@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a href="2.2.2 Price-calculus.html" class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a class="logo">
+							</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Meny</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h1>M E N Y</h1>
+					<ul>
+						<li><a href="Hjem.html">Hjem</a></li>
+						<li><a href="2.6.1 HR.html">- HR (Power BI dashboard)</a></li>
+						<li><a href="2.5.1 Covid-19.html">- Covid-19 (Python prosjekt)</a></li>
+						<li><a href="2.4.1 Bysykkel.html">- Bysykkel (SQL / Power BI prosjekt)</a></li>
+						<li><a href="2.3.1 Iskald.html">- Iskald (Qlik dashboard)</a></li>
+						<li><strong>- Priskalkyle (Excel prosjekt)</strong></a></li>
+						<li><a href="2.1.1 Sjomat.html">- Sjømat (Rapportoversikt)</a></li>
+						<li><a href="3.1 CV.html">CV og sertifikater</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>Prosjekt: Priskalkyle</h1>
+						<h4 style="margin-bottom: 0px;">Introduksjon</h4>
+						<p>I mitt nåværende selskap, som tilbyr tjenester innen utendørs vedlikehold, så jeg at det var et stort behov for å kunne prise en del tjenester 
+							mer nøyaktig. For tjenester som snøbrøyting, strøing og feiing brukes det i hele bransjen i stor grad kvadratmeterpriser. Den jobben blir 
+							stort sett gjort manuelt og krever å ha ansatte med lang erfaring i bransjen for å få det riktig. Min tanke var at dette kunne gjøres mer
+							nøyaktig, enklere og mer systematisk. I tillegg vil det være enklere å følge en felles strategi når alle som priser avtaler bruker det samme
+							verktøyet for å regne ut en kvadratmeterpris.</p>
+						<h4 style="margin-bottom: 0px;">Databehandling</h4>
+						<p>For å få til dette var tanken å lage en priskalkyle for alle <i>vintertjenester</i>. Dette inkluderer tjenester som brøyting, strøing og salting. 
+							Dette er sesongbaserte tjenester som kunder betaler en fast sesongpris for, uansett hvor mye tjenesten må bli utført i løpet av en sesong.
+							Med en priskalkyle vil en som skal prise en avtale legge inn visse prispåvirkende faktorer knyttet til adressen. Disse faktorene vektlegges i 
+							kalkylen og man vil få ut en veiledende pris. I tillegg tenkte jeg det kunne være lurt å få opp en oversikt over tilsvarende adresser/avtaler. 
+							Slik kan en som priser avtaler sammenligne veiledende pris med prisen på tilsvarende avtaler før det settes en endelig pris.</p>
+							<p>Jeg startet med å lage en tabell i Excel som automatisk filtreres når man fyller inn visse verdier i visse celler. 
+							Mitt utgangspunkt var å bruke vår egen adressedatabase som inneholder adresser, tjenester, priser, areal og mer. Denne dataen lastet jeg ned som 
+							en kommaseparert fil i Excel. Dette koblet jeg sammen med en oversikt over alle gatenavn i Oslo med tilhørende bydel og strøk. Slik ville jeg kunne 
+							filtrere for avtaler i samme bydel eller strøk. I tillegg ville det gi meg muligheten til å gi alle avtaler en indikator på hvor det lå i byen.
+							Høydemeteren til en avtale påvirker prisen, ettersom adresser "i høyden" i all hovedsak opplever mer vintervær. Siden prisen en kunde betaler 
+							er sesongbasert, bør adresser "i høyden" derfor prises høyere. Derfor slo jeg sammen disse tabellene og lagde én tabell som inneholdt allerede 
+							eksisterende avtaler med tjenesten de betalte for, adressen, arealet, høyde over havet, prisen de betalte, pris per kvadratmeter, strøk og bydel.</p>
+						<h4 style="margin-bottom: 0px;">Excel VBA makroer</h4>
+						<p>For å gjøre denne kalkylen mest mulig brukervennlig, måtte jeg holde det enkelt og sørge for at det ønskede resultatet ble oppnådd med færrest mulig klikk. 
+							For å få til det tok jeg i bruk en makro. Ettersom jeg kun har jobbet med grunnleggende makroer før var dette litt ufordrende, men jeg fikk til 
+							slutt satt opp en kode som gjør at tabellen filtreres automatisk når visse verdier blir lagt inn.</p>
+						<span class="image main"><img src="images/Priskalkyle_dashboard5.png" /></span>
+						<h4 style="margin-bottom: 0px;">Ferdig kalkyle</h4>
+						<p>Den ferdige priskalkylen ble seende ut som på bildene under. Dette er fiktive adressr og priser. Til venstre er kalkylen slik den vil se ut 
+							før den blir tatt i bruk. Til høyre ser vi at brukeren har lagt inn visse verdier, tabellen er filtrert og kalkylen har gitt et prisforslag. 
+							Brukeren har blant annet lagt 
+							inn hvilken tjeneste som skal prises, i hvilket område avtaleadressen ligger og hvor stort arealet er. Den eneste subjektive verdien som legges inn 
+							av brukeren er i hvilken grad dette er en tidsmessig krevende adresse. Brukeren ønsker i dette tilfelle å prise en tjeneste kalt 
+							<i>maskinell brøyting</i>. Brukeren har i tillegg angitt at det er grus på adressen og at det må brukes fres, to faktorer som øker prisen. 
+							På bakgrunn av verdiene som ble lagt inn har tabellen blitt filtrert til å kun vise avtaler som har maskinell brøyting, som ligger over 
+							300 meter over havet og som ligger i bydel Vestre Aker. Veiledende pris blir dermed 29 900 NOK, som er rett under 30 NOK per kvadratmeter.</p>
+						<img src="images/Priskalkyle1.jpg" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 2em;"> 
+						<img src="images/Priskalkyle3.jpg" style="float: right; width: 49%; margin-left: 1%; margin-bottom: 2em;">
+						<p style="clear: both;"></p>
+						<h4 style="margin-bottom: 0px;">Videre arbeid</h4>
+						<p>Før denne kalkylen kan tas i bruk, må det selvfølgelig settes en prisstrategi. For hvilken pris som kommer ut av kalkylen er til 
+							syvende sist en ren strategisk beslutning. I tillegg må tabellen holdes oppdatert, noe som vil kreve en del manuelt arbeid.</p>
+					</div>
+				</div>
+
+					<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+						</div>
+					</footer>
+	
+			</div>
+	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	
+</body>
+</html><!DOCTYPE HTML>
+	

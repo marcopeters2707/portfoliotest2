@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio, Marco Peters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<a class="logo">
+								<span class="symbol"><img src="images/wordicon1.png" alt="" /></span><span class="title">English</span>
+							</a>
+								<a class="logo">
+								</span><span class="title">/</span>
+							</a>
+								<a href="2.5.1 Covid-19.html" class="logo">
+								</span><span class="title">Norsk</span>
+							</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<h1>M E N U</h1>
+					<ul>
+						<li><a href="1.2 Home.html">Home</a></li>
+						<li><a href="2.6.2 HR.html">- HR (Power BI dashboard)</a></li>
+						<li><strong>- Covid-19 (Python project)</strong></a></li>
+						<li><a href="2.4.2 Bike-sharing.html">- Bike-sharing (SQL / Power BI project)</a></li>
+						<li><a href="2.3.2 Icecold.html">- Icecold (Qlik dashboard)</a></li>
+						<li><a href="2.2.2 Price-calculus.html">- Price-calculus (Excel project)</a></li>
+						<li><a href="2.1.2 Seafood.html">- Seafood (report overview)</a></li>
+						<li><a href="3.2 CV.html">CV and certificates</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+				<div id="main">
+					<div class="inner">
+						<h1>Project: COVID-19</h1>
+						<p>In this project, I worked with two different case studies diving deeper into COVID-19 data using Python. In the first case study, 
+							I used statistics on covid-cases and deaths related to covid worldwide. I used this to look for correlation with the
+							<i>World Happiness Report 2022</i>, a yearly report that calculates a score based on different parametres related to people´s 
+							happiness. This case study focused mainly on data processing and analysis. The second case study however focused mostly on 
+							data visualization. In this project.. </p>
+						<h2 style="margin-bottom: 0px;">A case study: COVID-19 data analysis</h2>
+						<h4 style="margin-bottom: 0px;">Importing data</h4>
+						<p>First, I imported pandas, numpy, seaborn and matplotlib.pyplot. Then, I imported all three CSV files and took a look at the data. 
+							This process can be seen in the images below. Both covid-related tables consist mostly of columns that depict daily registrered 
+							covid-cases and covid-related-deaths. For each day, this number is aggregated, so the final registrered day shows us the sum
+							of cases/deaths for the entire period. I also uploaded and imported a csv-file on global population by country and/or region.
+							Since the data on covid-cases and covid related deaths are total sums, I figured that it could be interesting to look at this 
+							data also with the countries´ population taken into consideration. For the purpose of correlation this however makes no difference.</p>
+						<img src="images/covid19_1.jpg" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 2em;">
+						<img src="images/covid19_2.jpg" style="float: right; width: 49%; margin-right: 1%; margin-bottom: 5em;">
+						<h4 style="margin-bottom: 0px;">Data processing</h4>
+						<p>In the next phase, I worked on processing the data with the goal of having only one dataframe containing all information 
+							I am interested in. For each table, I dropped some columns using the "drop"-command and I grouped all tables after country/region 
+							by using the "groupby"-command. Then, I created a new column which I wanted to depict the rate of COVID-infections. Instead of
+							calculating an average variable, I chose to calculate a variable showing the highest infection rate per country during the period.
+							The idea was that the maximum amount of infections happening in a country during one day may indicate something about that country.
+							How i did this can be seen on the right side.	 
+						<img src="images/covid19_3.jpg" style="float: right; width: 49%; margin-left: 3%; margin-bottom: 0em;">	<br>
+							<br>
+							Then, I inner-joined the tables using the "join"-command. Further, I calculated some new variables. I divided both the total 
+							number of covid-cases, the total number of COVID-related deaths and the maximum infection rate by the total population in each 
+							country, before multiplying by 1000. This gave me the number of registrered covid-cases during the period per 1000 inhabitants, 
+							the number of covid-related deaths per 1000 inhabitants and the maximum infection rate in one day per 1000 inhabitants. I chose 
+							to keep the happiness score, healthy_life_expectancy and GDP_per_capita as variables depicting how happy, healthy and 
+							economically well-off people are. We have to keep in mind however that the happiness score is a weighed number where
+							GDP per capita and healthy life expectancy were inputs. After renaming some columns, my final dataframe looked like this:</p>
+						<img src="images/covid19_4.jpg" style="float: left; width: 70%; margin-right: 29%; margin-bottom: 2em;">
+						<h4 style="margin-bottom: 0px;">Looking for correlation and visualizing the results</h4>
+						<p>To find out wether there is any correlation between the happiness variables and the covid-related variables, I used
+							the "corr"-command. As we see clearly, there is a significant correlation between several of the variables. The happiness score 
+							has a 31% postitive correlation with the number of COVID-related deaths, a 46% positive correlation with the maximum daily 
+							infection rate and a positive correlation with COVID-cases of 63%. For the healthy life expectancy variable, these numbers are 
+							respectively 47%, 49% and 70%. For the GDP per capita, these are 42%, 48% and 69%.  </p>
+						<img src="images/covid19_5.jpg" style="float: left; width: 70%; margin-right: 29%; margin-bottom: 2em;">
+						<p>We can also visualize this using a scatterplot with a regression line. In order to display the data better, I used a logarithmic 
+							scale and the sns.regplot-command. Looking at scatterplots of the "score" againgst the maximum daily infection rate, 
+							the "healthy life expectancy" against the COVID-cases and the GDP per capita against the COVID-related deaths,
+							we see clearly that there are strong correlations between all these variables.</p>
+						<img src="images/covid19_6.jpg" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 2em;">
+						<img src="images/covid19_7.jpg" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 3em;">
+						<img src="images/covid19_8.jpg" style="float: right; width: 32%; margin-right: 1%; margin-bottom: 5em;">
+					
+						<h3 style="margin-bottom: 0px;">A case study: COVID-19 data visualization</h3>
+						<h4 style="margin-bottom: 0px;">Importing and processing the data</h4>
+						<img src="images/covid19_2_1.jpg" style="float: right; width: 30%; margin-left: 3%; margin-bottom: 0em;">	<br>
+						<p>This time, I import pandas, numpy, matplotlib and plotly.express. I use the following URL 
+							https://raw.githubusercontent.com/datasets/covid-19/master/data/countries-aggregated.csv to acguire daily reported data 
+							confirmed covid19 cases, deaths and recoveries from 198 countries. The first data observations are from the 
+							22nd of January 2020, the last one are from April 2022. The data for Norway can be seen on the image to the right.</p>
+						<p>One type of chart Plotly offers is the choropleth map, which is seen below. In this case I visualized the global spread of 
+							COVID-19 cases and COVID-19 related deaths. Animation_frame allows us to choose a variable, in this case date, to see how 
+							the map changes.</p>
+						<img src="images/covid19_2_2.jpg" style="float: left; width: 47%; margin-right: 1%; margin-bottom: 1em;">
+						<img src="images/covid19_2_3.jpg" style="float: right; width: 51%; margin-right: 1%; margin-bottom: 1em;">
+						<p> - <br/> Now lets visualize how intensive the COVID-19 transmission has been in Norway throughout the entire period. To do this, 
+							we first must calculate the first derivation. Then we plot a line-graph using plotly.</p>
+						<img src="images/covid19_2_4.jpg" style="float: left; width: 70%; margin-right: 29%; margin-bottom: 1em;">
+						<p>Another interesting aspect to look at is how a lockdown affects infections and deaths in a country. In this case, I will 
+							once again use Norway as an example. I will look at thefirst wave of COVID-infections, and the effect of the first 
+							"lockdown" which was put into place on the 12th of March. In this case I find it suiting to only look at data from the 
+							first half of 2020. ed on the 26th of february. Below on the left side you can see how I did this. In the middle you can 
+							the graph I made with this. In the right graph I add some code to visualize the date of the lockdown and one month later.
+							This shows how infections first increased for another two weeks, before decreasing.</p>
+						<img src="images/covid19_2_5.jpg" style="float: left; width: 38%; margin-right: 4%; margin-bottom: 1em;">
+						<img src="images/covid19_2_7.jpg" style="float: right; width: 56%; margin-bottom: 2em;">
+						<img src="images/covid19_2_6.jpg" style="float: left; width: 37%; margin-right: 5%; margin-bottom: 1em;">
+						<br/>
+						<p>loloch was put into place on the 12th of March. In this case I find it suiting to only look at data from the 
+							first half of 2020. ed on thl</p>
+
+						<img src="images/covid19_2_8.jpg" style="float: left; width: 70%; margin-right: 29%; margin-bottom: 1em;">
+						<img src="images/covid19_2_9.jpg" style="float: left; width: 70%; margin-right: 29%; margin-bottom: 1em;">
+					</div>
+				</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+					</div>
+				</footer>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html><!DOCTYPE HTML>
